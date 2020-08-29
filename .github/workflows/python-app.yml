@@ -20,6 +20,11 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8.5
+        
+    - name: Make output folder
+      run: mkdir output
+    - name: Generate static pages
+      run: pelican content -o output -s publishconf.py
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
