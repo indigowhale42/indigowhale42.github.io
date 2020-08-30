@@ -6,8 +6,8 @@
     window.addEventListener('resize', resizeCanvas, false);
 
     function resizeCanvas() {
-            canvas.width = window.innerWidth - 50;
-            canvas.height = window.innerHeight -50;
+            canvas.width = window.innerWidth - 40;
+            canvas.height = window.innerHeight -40;
 
             /**
              * Your drawings need to be inside this function otherwise they will be reset when 
