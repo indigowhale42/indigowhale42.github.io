@@ -26,6 +26,7 @@
           </style>
           <!-- Custom styles for this template -->
           <link href="css/album.css" rel="stylesheet">
+          <!--<link href="css/dashboard.css" rel="stylesheet">-->
         <title>Projects</title>
     </head>
 
@@ -54,7 +55,7 @@
                                                 <polygon points="0 1, 0 0,1 0,0.8 1"></polygon>
                                             </clipPath>
                                           </defs>
-                                          <image x="-50" y="0" xlink:href="img/me.jpeg" clip-path="url(#clip-ff)" width="250" height="150"> </image>
+                                          <image x="-50" y="0" xlink:href="../img/me.jpeg" clip-path="url(#clip-ff)" width="250" height="150"> </image>
                                         </svg> 
                                     </svg>
                                 </div>
@@ -83,6 +84,7 @@
             
             <div class="navbar navbar-dark bg-dark shadow-sm">
                 <div class="container d-flex justify-content-between">
+                    
                     <a href="#" class="navbar-brand d-flex align-items-center">
                         <!--
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -92,93 +94,64 @@
                         </svg>
                         <strong></strong>
                         -->  
-                    </a>                  
+                    </a>  
+                                  
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
             </div>
+
+            
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <a class="navbar-brand" href="https://en.wikipedia.org/wiki/Cellular_automaton">wiki: Cellular Automata</a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Rule #" aria-label="RuleNumber">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">See rule</button>
+                    </form>
+                </div>
+            </nav>
+            
+                
         </header>
 
-        <main role="main">
-
-            <!-- DESCRIPTION -->
-            <section class="jumbotron text-center">
-              <div class="container">
-                <h1>Projects</h1>
-                <p class="lead text-muted">Description.</p>
-                <p>
-                  <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                  <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-                </p>
-              </div>
-            </section
-
-            <div class="album py-5 bg-light">
-                <div class="container">
-
-                    <div class="row">
-
-                        <div class="col-md-12">
-                            <h2>Python</h2>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Hello World</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Hello World</text></svg>
-                                <div class="card-body">
-                                    <p class="card-text">This is a hello world project</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./CellularAutomata/cellAu.html'">View project</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View code</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                <div class="card-body">
-                                    <p class="card-text">This is a hello world project</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View project</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View code</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                <div class="card-body">
-                                    <p class="card-text">This is a hello world project</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View project</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">View code</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+        
+        
+            
+        
+        <main role="main" class="col-md-12 col-lg-12"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+            
+            
+            <canvas  id="workplace" style="display: block;"></canvas>
+            <script src="cellAu.js"></script>    
+        
         </main>
-
-        <footer class="text-muted">
-            <div class="container">
-                <p class="float-right">
-                    <a href="#">Back to top</a>
-                </p>
-            </div>
-        </footer>
+        
 
     </body>
 </html>
