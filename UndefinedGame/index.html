@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Undefined Game</title>
+        <script src="apple.js"></script>
+        <script src="heart.js"></script>
+        <script src="speechBalloon.js"></script>
+        <!--<script src="playAudio.js"></script>-->
+        
+        <script type="text/javascript">
+            // This function will be called once the page loads completely
+            function pageLoaded(){
+                //alert("Hello World!");
+
+                // Get a handle to the canvas object
+                var canvas = document.getElementById("testcanvas");
+
+                // Get the 2d context for this canvas
+                var context = canvas.getContext("2d");
+                
+                // draw here...
+                
+                drawApple(context, 300, 300, 10, "red");
+                drawApple(context, 350, 350, 10, "yellow");
+
+                var spiderImage = document.getElementById("spider");
+                context.drawImage(spiderImage, 150, 150, 100, 100);
+                
+
+                drawSpeechBalloonQuadratic(context, 330, 80, 2, 1, "magenta");
+                context.font = "16pt Arial";
+                context.strokeText("Spider comes out!", 330 - 90, 75);
+                
+                // fill heart with wild
+                var wildImage = document.getElementById("wild");
+                var wildPattern = context.createPattern(wildImage, "no-repeat");
+                drawHeart(context, 100, 100, wildPattern);
+
+                /*
+                var spider2Image = new Image();
+                spider2Image.src = "./img/spider2.jpg";
+                spider2Image.onload = function() {
+                    alert("Image finished loading");
+                }
+                */
+
+                var audio = document.createElement("audio");
+                audio.style.display = "none";
+                audio.src = "./music/kokobop.ogg";
+                audio.autoplay = true;
+                audio.onended = function(){
+                    audio.remove() //Remove when played.
+                };
+                document.body.appendChild(audio);
+                /*
+                var mp3Support, oggSupport;
+                if (audio.canPlayType) {
+                    mp3Support = "" !== audio.canPlayType("audio/mpeg");
+                    oggSupport = "" !== audio.canPlayType("audio/ogg; codecs=\"vorbis\"");
+                } else {
+                    mp3Support = false;
+                    oggSupport = false
+                }
+
+                if (oggSupport) {
+                    var sound = new Audio();
+                    sound.src = "./music/kokobop.ogg"
+                    //sound.autoplay = true;
+                    //sound.volume = 1;
+                    sound.play();
+                    alert("Audio finished loading");
+                } else if (mp3Support) {
+                    var sound = new Audio();
+                    sound.src = "./music/kokobop.mp3"
+                    sound.autoplay = true;
+                    audio.preload = "auto";
+                    sound.volume = 1;
+                    sound.play();
+                    alert("Audio finished loading");
+                } 
+                //var spiderImage = document.getElementById("spider");
+                //context.drawImage(spiderImage, 150, 150, 100, 100);
+                document.body.appendChild(sound);
+                */
+            
+
+                //context.translate(200, 200);
+                //drawHeart(context, 0, 0, "black");
+
+
+            }
+            
+        </script>
+        
+    </head>
+        
+    <body onload="pageLoaded();">
+        <canvas width="640" height="480" id="testcanvas" style="border: 1px solid black;">
+            Your browser does not support HTML5 Canvas. Please shift to a newer browser.
+            <img src="img/wild.jfif" id="wild">
+            <img src="img/spider2.jpg" id="spider">
+        </canvas>
+        
+        <!--
+        <audio controls="controls">
+            <source src="music/kokobop.mp3" type="audio/mp3" />
+            Your browser does not support HTML5 Audio. Please shift to a newer browser.
+        </audio>
+        -->
+    </body>
+</html>

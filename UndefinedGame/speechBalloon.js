@@ -12,6 +12,9 @@ function drawSpeechBalloonQuadratic(context, x, y, color) {
     context.stroke();
 }
 
+/*
+ * (0, 0) point in center (tail included)
+*/
 function drawSpeechBalloonQuadratic(context, x0, y0, scaleWidth, scaleHeight, color) {
 
     y = y0 - 50 * scaleHeight;
