@@ -45,50 +45,7 @@
                 }
                 */
 
-                var audio = document.createElement("audio");
-                audio.style.display = "none";
-                audio.src = "./music/kokobop.ogg";
-                audio.autoplay = true;
-                audio.onended = function(){
-                    audio.remove() //Remove when played.
-                };
-                document.body.appendChild(audio);
-                /*
-                var mp3Support, oggSupport;
-                if (audio.canPlayType) {
-                    mp3Support = "" !== audio.canPlayType("audio/mpeg");
-                    oggSupport = "" !== audio.canPlayType("audio/ogg; codecs=\"vorbis\"");
-                } else {
-                    mp3Support = false;
-                    oggSupport = false
-                }
-
-                if (oggSupport) {
-                    var sound = new Audio();
-                    sound.src = "./music/kokobop.ogg"
-                    //sound.autoplay = true;
-                    //sound.volume = 1;
-                    sound.play();
-                    alert("Audio finished loading");
-                } else if (mp3Support) {
-                    var sound = new Audio();
-                    sound.src = "./music/kokobop.mp3"
-                    sound.autoplay = true;
-                    audio.preload = "auto";
-                    sound.volume = 1;
-                    sound.play();
-                    alert("Audio finished loading");
-                } 
-                //var spiderImage = document.getElementById("spider");
-                //context.drawImage(spiderImage, 150, 150, 100, 100);
-                document.body.appendChild(sound);
-                */
-            
-
-                //context.translate(200, 200);
-                //drawHeart(context, 0, 0, "black");
-
-
+                
             }
             
         </script>
