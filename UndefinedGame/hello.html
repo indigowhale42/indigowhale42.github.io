@@ -5,6 +5,7 @@
         <title>Sample HTML5 File</title>
         <script src="apple.js"></script>
         <script src="heart.js"></script>
+        <script src="speechBalloon.js"></script>
         <script type="text/javascript">
             // This function will be called once the page loads completely
             function pageLoaded(){
@@ -21,6 +22,13 @@
                 drawApple(context, 300, 300, 10, "red");
                 drawApple(context, 350, 350, 10, "yellow");
                 drawHeart(context, 100, 100, 10, "black");
+
+                drawSpeechBalloonQuadratic(context, 330, 80, 2, 1, "magenta");
+
+                //context.fillText("ALERT!!!", 330, 40);
+                context.font = "16pt Arial";
+                //context.strokeText("Spider comes out!", 330, 80);
+                context.strokeText("O", 330, 80);
                 
             }
         </script>
