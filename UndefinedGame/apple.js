@@ -1,37 +1,52 @@
-function drawApple(context, x, y, size, color) {
+class Apple {
 
-    /*** Тушка яблока ***/
+    constructor(x, y, color) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+    }
 
-    context.beginPath();
-    context.moveTo(x, y);
-    context.bezierCurveTo(x + 0, y - 10, x - 5, y - 14, x - 12, y - 8);
-    context.bezierCurveTo(x - 12, y - 8, x - 20, y + 12, x - 10, y + 15);
-    context.bezierCurveTo(x - 10, y + 15, x - 5, y + 20, x + 0, y + 16);
-    context.bezierCurveTo(x + 0, y + 16, x + 5, y + 20, x + 10, y + 15);
-    context.bezierCurveTo(x + 10, y + 15, x + 20, y + 12, x + 12, y - 8);
-    context.bezierCurveTo(x + 12, y - 8, x + 5, y - 14, x + 0, y - 10);
-    context.closePath();   
-    context.fillStyle = color;
-    context.fill();
-    // Обводка черным
-    context.stroke();
+    drawApple = function(context) {
 
-    /*** Хвостик яблока ***/
+        context.save();
 
-    context.beginPath();
-    context.moveTo(x, y);
-    context.bezierCurveTo(x, y - 10, x + 4, y - 18, x + 10, y - 20);
-    context.stroke();
-
-    /*** Листик яблока ***/
-
-    context.beginPath();
-    context.moveTo(x, y);
-    context.bezierCurveTo(x, y - 10, x - 2, y - 20, x - 15, y - 20);
-    context.bezierCurveTo(x - 15, y - 20, x - 14, y - 12, x, y - 10);
-    context.closePath();
-    context.fillStyle = "green";
-    context.fill();
-    // Обводка черным
-    context.stroke();
+        context.translate(this.x, this.y);
+    
+        /*** Тушка яблока ***/
+    
+        context.beginPath();
+        context.moveTo(0, 0);
+        context.bezierCurveTo(0, -10, -5, -14, -12, -8);
+        context.bezierCurveTo(-12, -8, -20, 12, -10, 15);
+        context.bezierCurveTo(-10, 15, -5, 20, 0, 16);
+        context.bezierCurveTo(0, 16, 5, 20, 10, 15);
+        context.bezierCurveTo(10, 15, 20, 12, 12, -8);
+        context.bezierCurveTo(12, -8, 5, -14, 0, -10);
+        context.closePath();   
+        context.fillStyle = this.color;
+        context.fill();
+        // Обводка черным
+        context.stroke();
+    
+        /*** Хвостик яблока ***/
+    
+        context.beginPath();
+        context.moveTo(0, 0);
+        context.bezierCurveTo(0, -10, 4, -18, 10, -20);
+        context.stroke();
+    
+        /*** Листик яблока ***/
+    
+        context.beginPath();
+        context.moveTo(0, 0);
+        context.bezierCurveTo(0, -10, -2, -20, -15, -20);
+        context.bezierCurveTo(-15, -20, -14, -12, 0, -10);
+        context.closePath();
+        context.fillStyle = "green";
+        context.fill();
+        // Обводка черным
+        context.stroke();
+    
+        context.restore();
+    }
 }

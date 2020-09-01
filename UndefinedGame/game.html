@@ -6,6 +6,7 @@
         <script src="apple.js"></script>
         <script src="heart.js"></script>
         <script src="speechBalloon.js"></script>
+        <script src="rainbowColorGenerator.js"></script>
         <!--<script src="playAudio.js"></script>-->
         
         <script type="text/javascript">
@@ -20,9 +21,17 @@
                 var context = canvas.getContext("2d");
                 
                 // draw here...
+
+                var generator = new RainbowColorGenerator(20, true);
+                var nextColor = generator.next();
                 
-                drawApple(context, 300, 300, 10, "red");
-                drawApple(context, 350, 350, 10, "yellow");
+                var redApple = new Apple(300, 300, generator.next());
+                var yellowApple = new Apple(350, 350, generator.next());
+
+                redApple.drawApple(context);
+                yellowApple.drawApple(context);
+                //drawApple(context, 300, 300, 10, "red");
+                //drawApple(context, 350, 350, 10, "yellow");
 
                 var spiderImage = document.getElementById("spider");
                 context.drawImage(spiderImage, 150, 150, 100, 100);
